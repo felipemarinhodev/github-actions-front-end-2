@@ -1,0 +1,16 @@
+name: "CI (Continues Integration): Main workflow"
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Installation
+        run: npm i
+      - name: Run Linter
+        run: npm run lint
