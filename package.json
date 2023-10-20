@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf build && next build && mv ./out ./build",
+    "build": "rm -rf build && next export && mv ./out ./build",
     "start": "next start",
     "lint": "next lint --fix",
     "deploy:prod": "npm run deploy:staging --prod",
